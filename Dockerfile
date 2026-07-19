@@ -50,7 +50,7 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     --mount=type=cache,target=/var/lib/apt,sharing=locked \
     apt-get update && \
     arch=$(arch | sed s/aarch64/arm64/ | sed s/x86_64/amd64/) && \
-    aria2c --check-certificate=false -x16 -s16 -o linuxqq.deb "https://dldir1.qq.com/qqfile/qq/QQNT/8015ff90/linuxqq_3.2.21-42086_${arch}.deb" && \
+    aria2c --check-certificate=false -x16 -s16 -o linuxqq.deb "https://qqdl.gtimg.cn/qqfile/QQNT/9.9.32/beta/fd40a3ec/linuxqq_3.2.30-50969_${arch}.deb" && \
     dpkg -i linuxqq.deb && apt-get -f install -y --no-install-recommends && \
     rm linuxqq.deb && \
     chmod 777 /opt/QQ/
